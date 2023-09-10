@@ -1,0 +1,75 @@
+[ 2023-09-09 23:38:40,065 ] 28 root - INFO - Data ingestion process has started
+[ 2023-09-09 23:38:41,178 ] 45 root - INFO - file saved sucessfully into artifacts folder
+[ 2023-09-09 23:38:41,194 ] 138 root - INFO - Intiate_Data Transformation Primary started
+[ 2023-09-09 23:38:41,334 ] 144 root - INFO - file read succefully
+[ 2023-09-09 23:38:41,509 ] 145 root - INFO -        ID Delivery_person_ID  Delivery_person_Age  Delivery_person_Ratings  ...  multiple_deliveries  Festival           City  Time_taken (min)
+0  0x6193      JAPRES18DEL03                  NaN                      NaN  ...                  1.0        No  Metropolitian                25
+1  0xa6b7     PUNERES04DEL02                 20.0                      4.7  ...                  0.0        No  Metropolitian                14
+2  0x4913    COIMBRES03DEL01                 22.0                      4.7  ...                  0.0        No          Urban                16
+3  0x3a9a      VADRES13DEL02                 34.0                      4.6  ...                  0.0        No  Metropolitian                44
+4  0xad82      JAPRES14DEL02                 26.0                      4.8  ...                  1.0        No          Urban                23
+
+[5 rows x 20 columns]
+[ 2023-09-09 23:38:41,540 ] 146 root - INFO -        ID Delivery_person_ID  Delivery_person_Age  Delivery_person_Ratings  ...  multiple_deliveries  Festival           City  Time_taken (min)
+0  0xcfcd      ALHRES08DEL02                 32.0                      4.1  ...                  1.0        No  Metropolitian                33
+1  0x4f03      MYSRES17DEL01                 32.0                      4.9  ...                  1.0        No  Metropolitian                28
+2  0xc48b      DEHRES01DEL01                 23.0                      4.5  ...                  1.0        No  Metropolitian                22
+3  0x277c      JAPRES20DEL03                 22.0                      4.5  ...                  1.0        No  Metropolitian                25
+4  0x5097      MYSRES04DEL02                 29.0                      4.9  ...                  1.0        No  Metropolitian                35
+
+[5 rows x 20 columns]
+[ 2023-09-09 23:38:41,556 ] 152 root - INFO - Now preprocessing to be started
+[ 2023-09-09 23:38:41,556 ] 39 root - INFO - in this method we preprocessed our column
+[ 2023-09-09 23:38:41,868 ] 39 root - INFO - in this method we preprocessed our column
+[ 2023-09-09 23:38:42,073 ] 168 root - INFO - train data coversion 
+       Delivery_person_Age  Delivery_person_Ratings  Restaurant_latitude  Restaurant_longitude  ...           City  Order_day  Order_month  Order_year
+1                     20.0                      4.7            18.514210             73.838429  ...  Metropolitian         15            3        2022
+2                     22.0                      4.7            11.025083             77.015393  ...          Urban         16            3        2022
+3                     34.0                      4.6            22.310237             73.158921  ...  Metropolitian         29            3        2022
+4                     26.0                      4.8            26.888420             75.800689  ...          Urban          5            4        2022
+5                     33.0                      4.1            23.351489             85.324253  ...  Metropolitian         15            3        2022
+...                    ...                      ...                  ...                   ...  ...            ...        ...          ...         ...
+30536                 28.0                      4.9             0.000000              0.000000  ...  Metropolitian         30            3        2022
+30537                 29.0                      4.9            21.170798             72.790489  ...  Metropolitian         30            3        2022
+30538                 24.0                      4.3            18.554382             73.798206  ...  Metropolitian          5            3        2022
+30539                 27.0                      4.4            19.103249             72.846749  ...  Metropolitian         27            3        2022
+30540                 32.0                      3.6            13.029780             80.208812  ...  Metropolitian         12            3        2022
+
+[29402 rows x 19 columns]
+[ 2023-09-09 23:38:42,089 ] 169 root - INFO - test data coversion 
+       Delivery_person_Age  Delivery_person_Ratings  Restaurant_latitude  Restaurant_longitude  ...           City  Order_day  Order_month  Order_year
+0                     32.0                      4.1            25.450329             81.834279  ...  Metropolitian         13            2        2022
+1                     32.0                      4.9            12.326356             76.619103  ...  Metropolitian          3            3        2022
+2                     23.0                      4.5             0.000000              0.000000  ...  Metropolitian         14            2        2022
+3                     22.0                      4.5            26.956431             75.776649  ...  Metropolitian         13            3        2022
+4                     29.0                      4.9            12.308500             76.665808  ...  Metropolitian         14            3        2022
+...                    ...                      ...                  ...                   ...  ...            ...        ...          ...         ...
+15038                 35.0                      4.6            12.949934             77.699386  ...  Metropolitian         30            3        2022
+15039                 38.0                      4.2            19.109300             72.825451  ...  Metropolitian          6            4        2022
+15040                 31.0                      4.4            11.001852             76.976268  ...          Urban         20            3        2022
+15041                 30.0                      4.9            19.131141             72.813074  ...  Metropolitian         26            3        2022
+15042                 29.0                      4.8            18.536562             73.896485  ...  Metropolitian          5            4        2022
+
+[14451 rows x 19 columns]
+[ 2023-09-09 23:38:42,104 ] 87 root - INFO - Preprocessed has started
+[ 2023-09-09 23:38:42,245 ] 182 root - INFO - preprocessed process sucessfully completed
+[ 2023-09-09 23:38:42,245 ] 183 root - INFO -        numerical_pipeline__Delivery_person_Age  numerical_pipeline__Delivery_person_Ratings  ...  categorical_pipeline__Festival  categorical_pipeline__City
+0                                    -1.654937                                     0.207292  ...                       -0.141733                    0.537056
+1                                    -1.307508                                     0.207292  ...                       -0.141733                   -1.791928
+2                                     0.777065                                    -0.112008  ...                       -0.141733                    0.537056
+3                                    -0.612650                                     0.526593  ...                       -0.141733                   -1.791928
+4                                     0.603351                                    -1.708512  ...                       -0.141733                    0.537056
+...                                        ...                                          ...  ...                             ...                         ...
+29397                                -0.265221                                     0.845894  ...                       -0.141733                    0.537056
+29398                                -0.091507                                     0.845894  ...                       -0.141733                    0.537056
+29399                                -0.960079                                    -1.069910  ...                       -0.141733                    0.537056
+29400                                -0.438936                                    -0.750610  ...                       -0.141733                    0.537056
+29401                                 0.429636                                    -3.305015  ...                       -0.141733                    0.537056
+
+[29402 rows x 19 columns]
+[ 2023-09-09 23:38:43,421 ] 27 root - INFO - starting of model training
+[ 2023-09-09 23:38:43,436 ] 40 root - INFO - Now model Training Processes has Started
+[ 2023-09-09 23:38:43,436 ] 30 root - INFO - evaluation of model has started
+[ 2023-09-09 23:38:44,031 ] 51 root - INFO - {'LinearRegression': 0.5631697051609543, 'Lasso': 0.4594145198636509, 'ElasticNet': 0.44892005201880947, 'Ridge': 0.5311441880688039}
+[ 2023-09-09 23:38:44,031 ] 55 root - INFO - best model score is :- 0.5631697051609543
+[ 2023-09-09 23:38:44,031 ] 63 root - INFO - Best Model Found , Model Name : LinearRegression , R2 Score : 0.5631697051609543
